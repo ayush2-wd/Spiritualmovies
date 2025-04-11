@@ -1,0 +1,441 @@
+/* General Styles */
+body {
+    background: linear-gradient(to bottom, #fff7e6, #faf3e0);
+    color: #4A176B;
+    font-family: "Poppins", sans-serif;
+}
+
+.app-container {
+    text-align: center;
+}
+
+/* Header */
+.header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, #fdf6e3, #fceabb);
+    border-bottom: 2px solid #d4a017;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Merriweather", serif;
+    color: #6D1B7B;
+}
+
+.menu-btn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #d4a017;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-btn:hover {
+    background: #b38705;
+}
+
+/* Generate Certificate Button */
+.certificate-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.generate-certificate {
+    display: inline-block;
+    padding: 14px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #6D1B7B, #D4A017);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.generate-certificate:hover {
+    background: linear-gradient(135deg, #5b1565, #b38705);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.generate-certificate:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Glow Effect */
+.generate-certificate::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0) 80%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.generate-certificate:hover::after {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .generate-certificate {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+
+/* Navigation Dots */
+.dots {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.dot.active-dot {
+    background-color: #d4a017;
+    transform: scale(1.2);
+}
+
+/* Mission Section */
+.mission-section {
+    background: #fdf6e3;
+    text-align: center;
+    padding: 60px 30px;
+    max-width: 850px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d4a017;
+    font-family: "Merriweather", serif;
+}
+
+.mission-text {
+    font-size: 1.3rem;
+    color: #6D1B7B;
+    max-width: 750px;
+    margin: 15px auto;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.8;
+}
+
+/* Quiz Modal */
+.quiz-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  }
+  
+  .quiz-modal.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .quiz-content {
+    background: white;
+    padding: 24px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .quiz-modal.show .quiz-content {
+    transform: scale(1);
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #555;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .close-button:hover {
+    color: #ff4d4d;
+  }
+  
+  .quiz-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .quiz-body {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .quiz-button {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background: #4CAF50;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  .quiz-button:hover {
+    background: #43A047;
+    transform: scale(1.05);
+  }
+    
+/* Improved Buttons */
+.button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #d4a017, #b38705);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background: linear-gradient(to right, #b38705, #8b6904);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Videos Section */
+.videos-section {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px; /* Reduced gap to keep elements closer */
+    padding: 20px;
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #fff7e6, #faf3e0); /* Light background for consistency */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #f2e0c9; /* Soft border to make it feel connected */
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.video-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.video-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 8px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.btn-quiz {
+    margin-top: auto;
+    padding: 10px 16px;
+    background: #d4a017;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-quiz:hover {
+    background: #b38705;
+}
+
+.quiz-feedback {
+    font-size: 0.9rem;
+    color: green;
+    margin-top: 8px;
+}
+
+/* Scriptures Section */
+.scriptures {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.scriptures-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #d4a017;
+    font-family: "Merriweather", serif;
+}
+
+.scriptures-text {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    color: #4A176B;
+}
+
+.scriptures-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.scripture-card {
+    background: linear-gradient(to top, #fdf6e3, #fceabb);
+    border-radius: 12px;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scripture-card:hover {
+    transform: translateY(-5px);
+}
+
+.scripture-img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.scripture-author, .scripture-verses {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+}
+
+.scripture-description {
+    font-size: 1.1rem;
+    margin-top: 12px;
+}
+
+/* Footer */
+.footer {
+    padding: 30px;
+    text-align: center;
+    color: #444;
+    font-size: 0.95rem;
+    background: linear-gradient(to right, #fdf6e3, #fceabb);
+    border-top: 2px solid #d4a017;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .scripture-card {
+        padding: 12px;
+    }
+
+    .scripture-img {
+        max-height: 170px;
+    }
+
+    .mission-title {
+        font-size: 2rem;
+    }
+
+    .mission-text {
+        font-size: 1.1rem;
+    }
+
+    .scriptures-title {
+        font-size: 2rem;
+    }
+
+    .scriptures-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
