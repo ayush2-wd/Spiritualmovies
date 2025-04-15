@@ -9,7 +9,7 @@ import chptr5 from "./image/Chptr3.jpeg";
 import chptr6 from "./image/Chptr3.jpeg";
 import chptr7 from "./image/Chptr3.jpeg";
 import chptr8 from "./image/Chptr3.jpeg";
-import certificateTemplate from "./image/certificate.png"
+import certificateTemplate from "./image/certificate.png";
 import img5 from "./image/gita.jpg";
 import img6 from "./image/mahabharat.jpg";
 import img7 from "./image/ramayana.jpg";
@@ -202,52 +202,57 @@ const videos = [
     description:
       "Krishna reveals the divine knowledge passed down through the ages, explaining the transcendental nature of His birth and activities.",
       quiz: [
-        {
-          "question": "Who narrated the events of the Kurukshetra war to Dhritarashtra?",
-          "options": ["Krishna", "Arjuna", "Sanjaya", "Bhishma"],
-          "answer": "Sanjaya"
-        },
-        {
-          "question": "Why did Arjuna refuse to fight in the battle?",
-          "options": [
-            "He was afraid of losing",
-            "He was overwhelmed by compassion for his relatives",
-            "He lacked weapons",
-            "He wanted to surrender to Duryodhana"
-          ],
-          "answer": "He was overwhelmed by compassion for his relatives"
-        },
-        {
-          "question": "Which two aspects define the first chapter of the Bhagavad Gita?",
-          "options": [
-            "Krishna's teachings and Arjuna's enlightenment",
-            "Observing the armies and Arjuna's lamentation",
-            "The battle strategies and war conclusion",
-            "Bhishma's leadership and Duryodhana's ambitions"
-          ],
-          "answer": "Observing the armies and Arjuna's lamentation"
-        },
-        {
-          "question": "What was Duryodhana’s reaction to the Pandavas’ military formation?",
-          "options": [
-            "He was confident of victory",
-            "He was pleased with their strategy",
-            "He was doubtful and worried",
-            "He ignored it completely"
-          ],
-          "answer": "He was doubtful and worried"
-        },
-        {
-          "question": "What does Arjuna’s reluctance to fight indicate about his character?",
-          "options": [
-            "He is a coward",
-            "He is a responsible devotee with a kind heart",
-            "He lacks proper military training",
-            "He wants to flee the battlefield"
-          ],
-          "answer": "He is a responsible devotee with a kind heart"
-        }
-      ],
+  {
+    "question": "What is the title of Chapter 4 of the Bhagavad Gita?",
+    "options": [
+      "Karma Yoga",
+      "Transcendental Knowledge",
+      "The Universal Form",
+      "Devotional Service"
+    ],
+    "answer": "Transcendental Knowledge"
+  },
+  {
+    "question": "To whom did Lord Krishna originally impart this transcendental knowledge?",
+    "options": [
+      "Vyasa",
+      "Arjuna",
+      "Vivasvan (the sun-god)",
+      "Narada"
+    ],
+    "answer": "Vivasvan (the sun-god)"
+  },
+  {
+    "question": "Why did Krishna explain this ancient knowledge to Arjuna?",
+    "options": [
+      "Because Arjuna was a famous warrior",
+      "Because Arjuna was Krishna's cousin",
+      "Because Arjuna was His devotee and friend",
+      "Because Arjuna requested for it"
+    ],
+    "answer": "Because Arjuna was His devotee and friend"
+  },
+  {
+    "question": "According to Krishna in Chapter 4, what happens to one who understands His divine birth and activities in truth?",
+    "options": [
+      "They attain wealth and fame",
+      "They are born again on earth",
+      "They attain liberation and do not take birth again",
+      "They rule over the heavens"
+    ],
+    "answer": "They attain liberation and do not take birth again"
+  },
+  {
+    "question": "What is the significance of performing actions without attachment, as explained in Chapter 4?",
+    "options": [
+      "It leads to renunciation of duty",
+      "It results in material rewards",
+      "It purifies one and leads to liberation",
+      "It makes one famous in society"
+    ],
+    "answer": "It purifies one and leads to liberation"
+  }
+]
       
   },
   // Chptr 5
@@ -1208,7 +1213,9 @@ const App = () => {
   
   <div className="scriptures-container">
     <div className="scripture-card">
+    <a href="https://vedabase.io/en/library/sb/" className="scripture-link">
       <img src= {img8} alt="Srimad Bhagavatam" className="scripture-img"/>
+      </a>
       <h3>Srimad Bhagavatam</h3>
       <p className="scripture-author">Shrila Krishna Dvaipayana Vedavyasa</p>
       <p className="scripture-verses">Verses: 18,000</p>
@@ -1218,7 +1225,9 @@ const App = () => {
     </div>
 
     <div className="scripture-card">
+    <a href="https://vedabase.io/en/library/rkd/" className="scripture-link">
       <img src={img7} alt="Ramayana" className="scripture-img"/>
+      </a>
       <h3>Ramayana</h3>
       <p className="scripture-author">Maharishi Valmiki Muni</p>
       <p className="scripture-verses">Verses: 24,000</p>
@@ -1228,7 +1237,9 @@ const App = () => {
     </div>
 
     <div className="scripture-card">
+    <a href="https://vedabase.io/en/library/bg/" className="scripture-link">
       <img src={img6} alt="Bhagavad Gita" className="scripture-img"/>
+      </a>
       <h3>Srimad Bhagavad Gita</h3>
       <p className="scripture-author">Shrila Krishna Dvaipayana Vedavyasa</p>
       <p className="scripture-verses">Verses: 700</p>
@@ -1238,7 +1249,9 @@ const App = () => {
     </div>
 
     <div className="scripture-card">
+    <a href="https://vedabase.io/en/library/mbk/" className="scripture-link">
       <img src={img5} alt="Mahabharat" className="scripture-img"/>
+      </a>
       <h3>Mahabharat</h3>
       <p className="scripture-author">Shrila Krishna Dvaipayana Vedavyasa</p>
       <p className="scripture-verses">Verses: 110,000</p>
